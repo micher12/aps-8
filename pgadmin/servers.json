@@ -1,0 +1,26 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "SGAI-Go (PostgreSQL 16) — rede interna",
+      "Group": "SGAI-Go",
+      "Host": "db",
+      "Port": 5432,
+      "MaintenanceDB": "sgaigo",
+      "Username": "sgaigo",
+      "SSLMode": "prefer",
+      "SavePassword": true,
+      "Comment": "Conexão via rede interna do Docker Compose (host 'db')"
+    },
+    "2": {
+      "Name": "SGAI-Go (PostgreSQL 16) — host local",
+      "Group": "SGAI-Go",
+      "Host": "host.docker.internal",
+      "Port": 5432,
+      "MaintenanceDB": "sgaigo",
+      "Username": "sgaigo",
+      "SSLMode": "prefer",
+      "SavePassword": true,
+      "Comment": "Alternativa: conecta pela porta 5432 mapeada no host"
+    }
+  }
+}

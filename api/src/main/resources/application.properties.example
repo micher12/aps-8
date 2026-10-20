@@ -1,0 +1,36 @@
+spring.application.name=sgaigo
+
+# Banco (PostgreSQL via docker-compose)
+spring.datasource.url=jdbc:postgresql://localhost:5432/sgaigo
+spring.datasource.username=sgaigo
+spring.datasource.password=${DB_PASSWORD:sgaigo}
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.open-in-view=false
+
+# Servidor
+server.port=8080
+spring.cache.type=caffeine
+
+# JWT — defina JWT_SECRET (>= 32 bytes) em produção; sem ela, uma chave aleatória
+# é gerada por boot (tokens caem a cada reinício, mas não há segredo previsível).
+sgaigo.jwt.secret=${JWT_SECRET:}
+sgaigo.jwt.expiration-ms=28800000
+
+# OpenAPI/Swagger
+springdoc.swagger-ui.path=/swagger-ui.html
+
+# NASA FIRMS API — obtenha a chave em https://firms.modaps.eosdis.nasa.gov/api/map_key/
+sgaigo.firms-map-key=${FIRMS_MAP_KEY:}
+
+# Log request
+#logging.level.org.springframework.web=DEBUG
+#logging.level.org.springframework.web.servlet.DispatcherServlet=DEBUG
+#spring.mvc.log-request-details=true
+logging.level.org.springframework.web.socket.sockjs=ERROR
+
+# Access log Tomcat
+#server.tomcat.accesslog.enabled=true
+#server.tomcat.accesslog.directory=logs
+#server.tomcat.accesslog.prefix=access
+#server.tomcat.accesslog.suffix=.log
+#server.tomcat.accesslog.pattern=%t %a "%r" %s %b %Dms

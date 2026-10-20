@@ -1,0 +1,100 @@
+# ============================================================
+# .gitignore universal — raiz do repositório (aps-8)
+# Padrões sem barra inicial valem em qualquer nível da árvore.
+# Substitui api/.gitignore e web/.gitignore (removidos).
+# ============================================================
+
+# ---------- Node / JS ----------
+node_modules/
+.pnp
+.pnp.js
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# ---------- Next.js / builds web ----------
+.next/
+out/
+build/
+dist/
+coverage/
+
+# ---------- Java / Gradle / Spring ----------
+.gradle/
+HELP.md
+*.class
+
+# Keep: conteúdo versionável dentro de src (Gradle/Eclipse)
+!**/src/main/**/build/
+!**/src/test/**/build/
+!**/gradle/wrapper/gradle-wrapper.jar
+
+# ---------- TypeScript ----------
+*.tsbuildinfo
+
+# ---------- Testes / ferramentas ----------
+# (coverage já coberto acima)
+*.swp
+*.swo
+
+# ---------- Logs / debug ----------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ---------- Segredos e config local ----------
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.jks
+api/src/main/resources/application.properties
+api/src/main/resources/application-local.properties
+!api/src/main/resources/application.properties.example
+
+# ---------- IDEs / editores ----------
+.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+.classpath
+.project
+.factorypath
+.settings/
+.springBeans
+.sts4-cache
+.apt_generated
+.nbproject/
+nbproject/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# Binários de IDE/compilação (src/versionado continua)
+bin/
+out/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# ---------- Sistema ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Ferramentas de agente (locais) ----------
+.claude/
+.codex/
+.gemini/
+.opencode/
+.impeccable/
